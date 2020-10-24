@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 432373308}
   - component: {fileID: 432373307}
   m_Layer: 0
-  m_Name: kabe
+  m_Name: kabe up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 811818288}
   - component: {fileID: 811818287}
   m_Layer: 0
-  m_Name: kabe
+  m_Name: kabe left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 1204518797}
   - component: {fileID: 1204518796}
   m_Layer: 0
-  m_Name: 'kabe '
+  m_Name: kabe right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 1947463238}
   - component: {fileID: 1947463241}
   m_Layer: 0
-  m_Name: 'kabe '
+  m_Name: kabe under
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
