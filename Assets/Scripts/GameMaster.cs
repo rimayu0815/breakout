@@ -18,9 +18,14 @@ public class GameMaster : MonoBehaviour
     void Update()
     {
         nowTime += Time.deltaTime;
-        if(boxNum <=0)
+        if (boxNum <= 0)
         {
-            GameOver(nowTime.ToString("F0")+"秒でクリアできた！"); //<=======秒数をstring型にキャストとして引数へ
+            GameOver(nowTime.ToString("F0") + "秒でクリアできた！"); //<=======秒数をstring型にキャストとして引数へ
+        }
+
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            GameOver(nowTime.ToString("F0") + "秒でクリアできた！");//クリアシーンのデバッグ用に追加
         }
     }
 

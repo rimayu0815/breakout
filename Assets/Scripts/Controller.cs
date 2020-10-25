@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour
         {
             transform.position -= transform.forward * 0.1f;
         }
-        float posZ = Mathf.Clamp(transform.position.z, kabeRight.transform.position.z, kabeLeft.transform.position.z);
+        float posZ = Mathf.Clamp(transform.position.z, kabeRight.transform.position.z + 0.75f, kabeLeft.transform.position.z - 0.75f);
         transform.position = new Vector3(transform.position.x, transform.position.y, posZ); 
                                     //Mathf.Clamp(player.transform.position.z, kabeLeft.transform.position.z, kabeRight.transform.position.z));
     }
