@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KabeOut : MonoBehaviour
+public class KabeOut : MonoBehaviour//KabeOutクラス
 {
     // Start is called before the first frame update
     void Start()
@@ -16,8 +16,8 @@ public class KabeOut : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)//これが適用されているオブジェクトに相手が衝突した瞬間、相手の情報がcollision型で送られる
     {
-        GameObject.Find("Master").GetComponent<GameMaster>().GameOver("ゲーム失敗、また挑戦しよう");//<=====文字列を引数へ
+        GameObject.Find("Master").GetComponent<GameMaster>().GameOver("ゲームに失敗、また挑戦しよう", false);//ゲームオブジェクトのMasterを探しGameMasterコンポーネントのGameOver関数を呼ぶ、(第２引数を追加)
     }
 }

@@ -327,6 +327,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultMessageText: {fileID: 1864660799}
+  audioClips:
+  - {fileID: 8300000, guid: 133fff03cc4515843bcb01081aff0d4d, type: 3}
+  - {fileID: 8300000, guid: 65c5cb29075d01b43aa31de09cf88186, type: 3}
+  audioSource: {fileID: 1696618795}
 --- !u!4 &754597783
 Transform:
   m_ObjectHideFlags: 0
