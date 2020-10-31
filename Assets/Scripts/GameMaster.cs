@@ -31,7 +31,7 @@ public class GameMaster : MonoBehaviour//GameMasterクラス
         }
     }
 
-    public void GameOver(string resultMessage, bool isClear)//GameOverメソッドで文字列型のresultMessageとブール型のisClearを渡す(第２引数を追加)
+    public void GameOver(string resultMessage, bool isClear)//GameOverメソッドで文字列型のresultMessageとブール型のisClearに入っている値をもらう(第２引数を追加)
     {
         DataSender.resultMessage = resultMessage; //DataSenderクラスのresultMessage変数のオブジェクトをresultMessageと同じにする
 
