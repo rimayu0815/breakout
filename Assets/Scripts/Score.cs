@@ -47,7 +47,7 @@ public class Score : MonoBehaviour//Scoreクラス
 
     private void DisplayScores()//DisplayScoresメソッド
     {
-        scoreText.text = score.ToString();//score変数をTostringメソッドを使って文字列に変換し、scoreTextに代入する
+        scoreText.text = score.ToString();//score変数をToStringメソッドを使って文字列に変換し、scoreTextに代入する
         //int型.の後にはメソッドがポップアップで表示される
     }
 

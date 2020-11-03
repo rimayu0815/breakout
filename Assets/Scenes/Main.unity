@@ -690,7 +690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f814781e673bbb41a58e180d8acd96a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxObjPrefab: {fileID: 3247477267185698526, guid: 858a2d6eb0c607944a2b57e5f0a6d70f, type: 3}
+  boxObjPrefabs:
+  - {fileID: 3247477267185698526, guid: 858a2d6eb0c607944a2b57e5f0a6d70f, type: 3}
+  - {fileID: 2350822760279341291, guid: 469a2fd4ab0229d4b88e680d2891c242, type: 3}
   boxesObj: {fileID: 1785405399}
 --- !u!1 &811818285
 GameObject:
