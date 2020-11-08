@@ -9,17 +9,18 @@ public class Score : MonoBehaviour//Scoreクラス
 
     public Text highScoreText;//Text型のhighSoreText変数
 
-    private int score;//整数型のscore変数
+    private static int score;//整数型のscore変数
 
-    private int highScore;//整数型のhighScore変数
+    private static int highScore;//整数型のhighScore変数
 
     private string highScoreKey = "highScore";//highScoreを文字列型のhighScoreKey変数に代入する
 
-    // Start is called before the first frame update
-    void Start()//Startメソッド、StartやUpdateメソッド以外はどこに書いても呼び出さないと動かない
+    void Awake()//Awakeメソッド
     {
-        Initialize();//Startで呼び出すために入れている
-
+        if(!LevelManager.isStart)//もしLevelManagerクラスのisStart変数がfalseだったら
+        {
+            Initialize();//Initializeメソッドを実行する
+        }
     }
 
     private void Initialize()//Initializeメソッド
@@ -27,6 +28,12 @@ public class Score : MonoBehaviour//Scoreクラス
         score = 0;//scoreを０にする
 
         highScore = PlayerPrefs.GetInt(highScoreKey, 0);//Playprefs.GetInt関数を利用してhighScoreをロードしている、もしデータがなければ０を代入する
+
+    }
+
+    private void Start()
+    {
+        DisplayScores();//DisplayScoresを使って０を表示
     }
 
     public void Addpoint (int point)//Addpointメソッド、int型の値をpointとして受け取る
@@ -49,6 +56,7 @@ public class Score : MonoBehaviour//Scoreクラス
     {
         scoreText.text = score.ToString();//score変数をToStringメソッドを使って文字列に変換し、scoreTextに代入する
         //int型.の後にはメソッドがポップアップで表示される
+        highScoreText.text = highScore.ToString();//highscore変数をToStringメソッドを使って文字列に変換し、highscireTextに代入する
     }
 
     public void Save()//Saveメソッド
@@ -56,7 +64,7 @@ public class Score : MonoBehaviour//Scoreクラス
         PlayerPrefs.SetInt(highScoreKey, highScore);//PlayerPrefsクラスのSetIntメソッドにhighScoreKeyとhighScoreを送る、SetIntを呼び出すためにhighScoreKeyとhighScore変数を用意している
         PlayerPrefs.Save();//PlayerPrefsクラスのSaveメソッドが実行される
 
-        Initialize();//Initializeメソッドを呼び出して実行する
+        Debug.Log(highScore);//highScore変数の値をDebugクラスのLogメソッドに与えて実行する
     }
     // Update is called once per frame
     void Update()

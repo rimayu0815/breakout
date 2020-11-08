@@ -21,7 +21,7 @@ public class BoxInit : MonoBehaviour
 
                 g.transform.position = new Vector3((2f + (1f * y)),0.4f,(-4.2f + (1.2f * x)));
 
-                g.GetComponent<Destroyer>().masterobj = masterObj;
+                g.GetComponent<Destroyer>().masterObj = masterObj;
 
             }
         }

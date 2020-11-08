@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 10
-  masterobj: {fileID: 0}
+  masterObj: {fileID: 0}
   initHp: 1
   hitSE: {fileID: 8300000, guid: 50a7022acd06e9747996762a38ca57b9, type: 3}
   DestroySE: {fileID: 8300000, guid: 46559e8ad9e4efd43b5e8e583e6077f4, type: 3}
+  rend: {fileID: 8022991448843207754}
