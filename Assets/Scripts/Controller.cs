@@ -8,6 +8,7 @@ public class Controller : MonoBehaviour
     GameObject player;
     GameObject kabeLeft;
     GameObject kabeRight;
+    public float playerSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -22,12 +23,12 @@ public class Controller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += transform.forward * 0.1f;
+            transform.position += transform.forward * playerSpeed;
         }
 
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position -= transform.forward * 0.1f;
+            transform.position -= transform.forward * playerSpeed;
         }
         float posZ = Mathf.Clamp(transform.position.z, kabeRight.transform.position.z + 0.75f, kabeLeft.transform.position.z - 0.75f);
         transform.position = new Vector3(transform.position.x, transform.position.y, posZ); 
