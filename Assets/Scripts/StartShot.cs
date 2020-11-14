@@ -36,12 +36,10 @@ public class StartShot : MonoBehaviour//StartShotクラス
 
             Vector3 normalDirection = (rayHitPosition - this.transform.position).normalized;
 
-            this.GetComponent<Rigidbody>().AddForce(normalDirection * shootPower);
-
             isShooted = true;
             //transform.eulerAngles = new Vector3(0, Random.Range(30, 120), 0);
 
-            GetComponent<Rigidbody>().AddForce(transform.forward * (500 + (LevelManager.level * addSpeed)));
+            GetComponent<Rigidbody>().AddForce(normalDirection * (500 + (LevelManager.level * addSpeed)));
         }
     }
 
